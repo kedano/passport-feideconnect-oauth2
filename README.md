@@ -19,7 +19,7 @@ accepts these credentials and calls `done` providing a user, as well as
 	passport.use(new FeideConnectStrategy({
 			clientID: CLIENT_ID,
 			clientSecret: CLIENT_SECRET,
-      			callbackURL: 'https://www.example.net/auth/feideconnect/callback'
+			callbackURL: 'https://www.example.net/auth/feideconnect/callback'
 		},
 		function(accessToken, refreshToken, profile, done) {
 			User.findOrCreate({ id: profile.id }, function (err, user) {
